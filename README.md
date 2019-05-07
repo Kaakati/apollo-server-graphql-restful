@@ -10,6 +10,8 @@ Edit:
 Edit Seeds according to your needs.
 And Setup Mongo Database by replacing the URL.
 Database/db.js
+
+[Routes/v1] folder for RESTful, [Resolvers] folder for GraphQL Methods.
 ```
 
 Pull the repository and run
@@ -25,6 +27,7 @@ npm start
 #### Access GraphQL Playground at:
 ```
 http://localhost:4000/graphql
+http://localhost:4000/api/v1
 ```
 
 #### Features:
