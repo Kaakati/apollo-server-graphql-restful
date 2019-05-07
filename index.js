@@ -12,6 +12,8 @@ const cors = require('cors');
 const app = express();
 const http = require('http');
 
+const routes_v1 = require('./Routes/v1/index');
+
 // Importing 'body-parser' package.
 const bodyParser = require('body-parser')
 
@@ -28,6 +30,8 @@ const environment = process.env.NODE_ENV || 'development';
 const config = configurations[environment];
 
 app.use(cors());
+app.use(express.json())
+app.use('/api/v1/', routes_v1);
 app.use(bodyParser.json({limit: '2mb'}));
 app.use(bodyParser.urlencoded({limit: '2mb', extended: true}));
 
